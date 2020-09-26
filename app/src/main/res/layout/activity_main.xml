@@ -4,35 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="133dp"
-        android:layout_height="147dp"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <RelativeLayout
+    <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    <TextView
-        android:id="@+id/TvView"
-        android:layout_width="wrap_content"
+        android:id="@+id/searchView"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userRv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@color/colorPrimary"
-        android:text="Name" />
-
-        <TextView
-            android:id="@+id/TvView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="31020"
-            android:layout_below="@id/TvView"
-            android:textColor="@color/colorAccent"
-            android:textSize="10sp" />
-    </RelativeLayout>
-
-
+        tools:itemCount="4"
+        tools:listitem="@layout/item_user" />
 
 </LinearLayout>
